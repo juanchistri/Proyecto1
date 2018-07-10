@@ -1,25 +1,33 @@
-//
-//  ViewController.swift
-//  Proyecto1
-//
-//  Created by Gabriel Alano on 7/9/18.
-//  Copyright © 2018 Juan Alano. All rights reserved.
-//
+/*
+ 
+ EJERCICIO: Generar 100 numbers 0 al 100, incluir el 100.
+ 
+ Imprimir en consola los siguientes calculos:
+ 
+ - divisible entre 5: el numero + la palabra "bingo"
+ - si es par: el numero + la palabra "par"
+ - si es impar: imprimir el numero + la palabra "impar".
+ - Rango del 30 a 40: El número + la palabra "Viva Swift"
+ 
+ */
 
 import UIKit
 
-class ViewController: UIViewController {
+var regla = ["Par", "Impar", "Bingo", "Viva Swift"]
+var rango = 0...100
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+for num in rango { // Para cada numero dentro del rango, ejecutar las siguientes condiciones:
+    
+    if num % 5 == 0 {
+        print (num, regla[2])
+        if num % 2 == 0 {
+            print (num, regla[0])
+        }else{
+            print (num, regla[1])
+        }
+        if num >= 30 && num <= 40 {
+            print(num, regla[3])
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
-
