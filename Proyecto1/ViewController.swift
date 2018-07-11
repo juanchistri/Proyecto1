@@ -16,20 +16,19 @@ import UIKit
 var regla = ["Par", "Impar", "Bingo", "Viva Swift"]
 var rango = 0...100
 
-for num in rango { // Para cada numero dentro del rango, ejecutar las siguientes condiciones:
-    
-    if num % 2 == 0 {
-        print (num, regla[0])
-    }else{
-        
-        print (num, regla[1])
-        if num % 5 == 0 {
-            print (num, regla[2])
-        } // Pasar para despues de "else" para no confundir, de esta forma imprime todos los numeros del rango consecutivos.
-        if num >= 30 && num <= 40 {
-            print(num, regla[3])
-            
-        }
-        
+if num % 5 == 0 {
+    print ("\(num)", regla[2])
+} // Pasar para despues de "else" para no confundir, de esta forma imprime todos los numeros del rango consecutivos.
+
+if num % 2 == 0 {
+    print ("\(num)", regla[0])
+}else{
+    if num % 2 == 1  {
+        print ("\(num)", regla[1])
     }
+    if num >= 30 && num <= 40 { // Si se codifica la condición luego del else, etiqueta los numeros entre 30 y 40 unicamente algunos impares, si se condicina antes del else, identifica los Viva Swift solo algunos pares. y no todos los del rango.
+        print("\(num)", regla[3])
+    }
+    
+}
 }
